@@ -65,9 +65,46 @@ body{
     cursor: pointer;
     color: white;
 }
+.boton_menu {
+    display: block;
+}
 .colaboraciones{
     display: flex;
     gap: 20px;
     height: 23px;
 }
 
+@media (max-width:1000px) {
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    .info{
+        flex-direction: column-reverse;
+        margin: 50px;
+    }
+    .foto_perfil img{
+        width: 400px;
+    }
+    .contenido{
+        text-align: center;
+    }
+    .logo{
+       display: flex;
+       padding-left: 20%;
+    }
+    .header{
+        display: flex;
+        position: absolute;
+        padding: 20px;
+    }
+    .opciones{
+        display: none;
+    }
+    .botones{
+        display: none;
+    }
+    .boton_menu {
+        display: flex;
+    }
+}
