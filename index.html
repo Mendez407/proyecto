@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="main.js"defer>
+  <script src="main.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Epilogue:wght@200;300&display=swap" rel="stylesheet">
@@ -21,42 +21,55 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="logo barra">
+  <div class="encabezado">
+    <div class="logo">
       <img src="images/logo.svg" alt="">
     </div>
-    <div class="opciones">
-      <div class="Features">
-        <label id="features">Features</label>
-       <img src="images/icon-arrow-down.svg" alt="">
-      </div>
-      <div class="Company">
-        <label id="company">Company</label>
-       <img src="images/icon-arrow-down.svg" alt="">
-      </div>
-      <div class="Careers">
-        <label>Careers</label>
-      </div>
-      <div class="About">
-        <label>About</label>
-      </div>
-    </div>
-    <div class="botones barra">
-      <div class="boton_login">
-        <button>Login</button>
-      </div>
-      <div class="boton_register">
-        <button>Register</button>
-      </div> 
-    </div>
-    <div class="boton_menu">
+    <div class="boton_menu" id="boton_menu">
       <img src="images/icon-menu.svg" alt="icon-menu">
     </div>
+    <div class="boton_close_menu" id="boton_close_menu">
+        <img src="images/icon-close-menu.svg" alt="icon-menu">
+      </div>
+    <div class="barra_opciones" id="barra_opciones">
 
-  </header>
+      <div tabindex="1" id="Features">
+        <label>Features
+           <img id="down_Features" src="images/icon-arrow-down.svg" alt="">
+        </label>
+        
+        <div class="opciones" id="opcion1">
+          <div class="opcion"><img src="images/icon-todo.svg" alt=""><label>Todo List</label></div>
+          <div class="opcion"><img src="images/icon-calendar.svg" alt=""><label>Calendar</label></div>
+          <div class="opcion"><img src="images/icon-reminders.svg" alt=""><label>Reminders</label></div>
+          <div class="opcion"><img src="images/icon-planning.svg" alt=""><label>Planning</label></div>
+        </div>
+      </div>
+        <div tabindex="1" class="icono2" id="Company">
+          <label>Company
+            <img id="down_Company" src="images/icon-arrow-down.svg" alt="">
+          </label>
+            <div class="opciones" id="opcion2">
+              <div class="opcion"><label> History</label></div>
+              <div class="opcion"><label>Our Team</label></div>
+              <div class="opcion"><label>Blog</label></div>
+        </div> 
+        </div>
+   
+      <label>Careers</label>
+      <label>About</label>
+      <div class="botones">
+        <button>Login</button>
+        <button>Register</button>
+      </div>
+     
+    </div>
+    
+  </div>
+<div class="fonto_menu"></div>
   <section>
-    <div class="info">
-      <div class="contenido">
+    <div class="contenido">
+      <div class="bloque_izquierdo">
         <div class="titulo">
           <h2>Make</h2>
           <h2> remote work</h2>
@@ -65,8 +78,8 @@
           <p> Get your team in sync, no matter your location. Streamline processes, 
             create team rituals, and watch productivity soar</p>
         </div>
-        <div class="boton_learn">
-          <button>Learn more</button>
+        <div class="boton_learn" >
+          <button class="learn">Learn more</button>
         </div>
         <div class="colaboraciones">
           <img src="images/client-databiz.svg" alt="">
@@ -76,12 +89,15 @@
         </div>
       </div>
       
-      <div class="foto_perfil">
-        <img src="images/image-hero-desktop.png" alt="">
+      <div class="bloque_derecho">
+        <div class="foto_perfil">
+          <img class="foto" src="images/image-hero-desktop.png" alt="">
+        </div>
       </div>
+  
     </div>
-  </section>
 
- 
+    
+  </section>
 </body>
 </html>

@@ -3,108 +3,196 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 18px;
-    font-family: 'Dancing Script', cursive;
-    font-family: 'Epilogue', sans-serif;
+    font-family:sans-serif;
 }
-body{ 
-    display: grid;
-    place-content: center;
+#abajo{
+    display: none;
 }
-.header{
-    width: 100%;
+#up{
+    display: none;
+}
+.encabezado{
     display: flex;
-    justify-content: space-between;
-    padding-top: 20px ;
+    padding: 30px;
+    gap: 40px;
 }
-.barra{
-    display: flex;
+.barra_opciones{
     gap: 30px;
-    align-items: center;
+    display: flex;
+}
+.boton_close_menu{
+    transform: scale(0);
 }
 .opciones{
-    display: flex;
-    margin-right: 20%;
-    gap: 20px;
+    position: absolute;
+    border-radius: 4px;
+    display: none;
+    padding: 5px;
+    line-height: 30px;
+    box-shadow:
+    0 0 5px rgba(0, 0, 0, 0.7);
 }
 .botones button{
     background: white;
     border-radius: 10px;
-    padding: 5px;
+    padding: 8px;
+    color: hsl(0, 0%, 41%);
+    border: 1px solid hsl(0, 0%, 41%);
+    width: 120px;
     cursor: pointer;
 }
-.info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    padding: 40px 80px 0px;
-    gap: 90px;
+.botones button:hover{
+    border: 2px solid black;
+    color:black;
+    -webkit-text-stroke: 1px;
+    
 }
-.titulo h2{
-    font-size: 60px;
-    -webkit-text-stroke: 2px;
+.botones button:focus{
+    background: white;
+    color: black;
+}
+.botones{
+    right: 0;
+    display: flex;
+    gap: 20px;
+    padding-right: 40px;
+    position: absolute;
 }
 .contenido{
-    display: grid;
-    gap: 50px;
+    display: flex;
+    padding: 32px 80px;
+    gap: 10%;
 }
+
 .foto_perfil img{
-   width: 500px;
-   height: 500px;
-}
+    width: 500px;
+    height: 490px;
+ }
 .mensaje p{
     font-size: 20px;
 }
-.mensaje{
-    max-width: 400px;
+.titulo h2{
+    font-size: 60px;
+    -webkit-text-stroke: 3px;
 }
-.boton_learn button{
-    background: black;
-    border-radius: 10px;
-    padding: 10px;
-    cursor: pointer;
-    color: white;
+.bloque_izquierdo{
+    display: grid;
+    width: 100%;
+    padding: 50px;
 }
-.boton_menu {
-    display: block;
+.bloque_derecho{
+    display: grid;
+    width: 100%;
 }
 .colaboraciones{
     display: flex;
     gap: 20px;
     height: 23px;
 }
+.boton_learn button{
+    background: white;
+    border-radius: 10px;
+    border: 2px solid;
+    padding: 10px;
+    cursor: pointer;
 
-@media (max-width:1000px) {
-    body{
-        display: flex;
-        justify-content: center;
+}
+.learn:focus{
+    background: black;
+    color: white;
+}
+.learn:hover{
+    background: black;
+    color: white;
+}
+.boton_menu{
+    display: none;
+}
+.opcion{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 15px;
+}
+@media (max-width:880px) {
+    .opciones{
+        position: relative;
+        box-shadow:
+        0 0 5px rgba(0, 0, 0, 0);
     }
-    .info{
+    .logo{
+        position: relative;
+    }
+    .logo img{
+        position: absolute;
+    }
+    .contenido{
         flex-direction: column-reverse;
-        margin: 50px;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+    .bloque_izquierdo{
+        gap: 40px;
     }
     .foto_perfil img{
         width: 400px;
+        content: url(images/image-hero-mobile.png);
     }
-    .contenido{
-        text-align: center;
-    }
-    .logo{
-       display: flex;
-       padding-left: 20%;
-    }
-    .header{
+    .logo img{
         display: flex;
+    }
+    .boton_menu{
+        display: flex;  
+        position: fixed;
+        cursor: pointer;
+        top: 5%;
+        right: 3%;
+        transition: transform .4s ease-in-out;
+    }
+    .boton_close_menu{
         position: absolute;
-        padding: 20px;
+        top: 4%;
+        right: 4%;
+        cursor: pointer;
+        transform: scale(0);
+        z-index: 10;
+        transition: transform .2s ease-in-out;
     }
-    .opciones{
-        display: none;
+
+    .barra_opciones{
+       position: fixed;
+       flex-direction: column;
+       top: 0;
+       width: 0;
+       padding: 0px;
+       right: 0;
+       bottom: 0;
+       background: rgb(231, 11, 231);
+       transition: width 0.2s ease-in-out;
+    }    
+    .open_menu{
+        width: 50vw ;
+        padding: 50px;
+        transition: width 0.2s ease-in-out;
     }
+  .icono1{
+    display: inline;
+  }
     .botones{
-        display: none;
-    }
-    .boton_menu {
         display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-right: 0;
+        top: 20px;
     }
+    .botones button{
+        width: 180px;
+        border-radius: 10px;
+        margin: auto;
+    }
+    .colaboraciones{
+        display: block; 
+    }
+
 }
